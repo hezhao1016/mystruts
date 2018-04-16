@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mystruts [
+	<!ELEMENT mystruts (actions)>
+
+	<!ELEMENT actions (action*)>
+	
+	<!ELEMENT action (result*)>
+	<!ATTLIST action
+		name CDATA #REQUIRED
+		class CDATA #REQUIRED
+	>
+	
+	<!ELEMENT result (#PCDATA)>
+	<!ATTLIST result
+		name CDATA #IMPLIED
+		resultType (redirect|forward|ajax|stream|chain|redirectChain|none) "forward"
+	>
+]>
+<mystruts>
+	<actions>
+		<action name="login" class="action.LoginAction">
+			<result name="success" resultType="redirect">/welcome.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="register" class="action.RegisterAction">
+			<result name="success" resultType="redirect">/ok.jsp</result>
+			<result name="error">/register.jsp</result>
+		</action>
+	</actions>
+</mystruts>

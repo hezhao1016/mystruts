@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mystruts [
+	<!ELEMENT mystruts (actions)>
+	<!ELEMENT actions (action*)>
+	<!ELEMENT action (result*)>
+	<!ATTLIST action
+		name CDATA #REQUIRED
+		class CDATA #REQUIRED>
+	<!ELEMENT result (#PCDATA)>
+	<!ATTLIST result
+		name CDATA #IMPLIED
+		resultType (redirect|forward|ajax|stream|chain|redirectChain|none) "forward">
+]>
+<mystruts>
+	<actions>
+		<action name="" class="">
+			<result></result>
+		</action>
+	</actions>
+</mystruts>
